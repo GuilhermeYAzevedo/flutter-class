@@ -31,64 +31,118 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: EdgeInsets.all(20),
           child: Column(
             children: <Widget>[
-              Text(
-                'RATES AND FEES',
+              Row(mainAxisAlignment: MainAxisAlignment.start, children: [
+                Text(
+                  ' RATES AND FEES',
+                ),
+              ]),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Expanded(
+                    flex: 5,
+                    child: Column(
+                      children: [
+                        Container(
+                            child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Annual Fee'),
+                                Text('\$95'),
+                              ],
+                            ),
+                          ],
+                        )),
+                        Container(
+                            child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Foreign Transaction'),
+                                Text('\$0'),
+                              ],
+                            ),
+                          ],
+                        )),
+                        Container(
+                            child: Row(
+                          children: [
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Ballance Transfer Free'),
+                                Text('\$5'),
+                              ],
+                            ),
+                          ],
+                        )),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                      flex: 5,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Cash Advance APR'),
+                                Text('25%'),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Regular APR'),
+                                Text('16 - 23%'),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text('Intro APR'),
+                                Text('-'),
+                              ],
+                            ),
+                          )
+                        ],
+                      )),
+                ],
               ),
               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[Text('Annual fee'), Text("\$$value1")],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Text('Cash advance APR'),
-                        Text("$cash1%")
-                      ],
-                    )
-                  ]),
+                children: [
+                  Flexible(
+                      child: Text(
+                          'Earn 60,000 bonus points after you spand \$4,000 on purchases in the first 3 months from account oppening'))
+                ],
+              ),
               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Column(
-                      // crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Text('Foreign transaction'),
-                        Text("\$$value2")
-                      ],
-                    ),
-                    Column(
-                      children: <Widget>[
-                        Text('Regular APR'),
-                        Text("$apr2" "-" "$apr%")
-                      ],
-                    )
-                  ]),
+                children: [Text('Reward Points')],
+              ),
               Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Column(
-                      // crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Text('Ballance transfer fee'),
-                        Text("\$$value3")
+                children: [
+                  Card(
+                      child: Container(
+                    decoration: BoxDecoration(color: Colors.pink),
+                    child: Column(
+                      children: [
+                        //Image.asset('')
+                        Text('Lyft rides thorugh March 2022.'),
+                        Text('5x')
                       ],
                     ),
-                    Column(
-                      children: <Widget>[Text('Intro APR'), Text("-")],
-                    )
-                  ]),
-              Row(children: <Widget>[
-                new Flexible(
-                    child: new Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    new Text(
-                        "Earn 60,00 bonus points after you spend \$$bonusPoint on purchases in the first 3 months from account opening")
-                  ],
-                ))
-              ])
+                  ))
+                ],
+              )
             ],
           ),
         ));
