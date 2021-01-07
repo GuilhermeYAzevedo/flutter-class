@@ -128,21 +128,62 @@ class _MyHomePageState extends State<MyHomePage> {
               Row(
                 children: [Text('Reward Points')],
               ),
-              Row(
-                children: [
-                  Card(
+              Row(children: [
+                Expanded(
+                  child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      color: Colors.pink,
                       child: Container(
-                    decoration: BoxDecoration(color: Colors.pink),
-                    child: Column(
-                      children: [
-                        //Image.asset('')
-                        Text('Lyft rides thorugh March 2022.'),
-                        Text('5x')
-                      ],
-                    ),
-                  ))
-                ],
-              )
+                        padding: EdgeInsets.all(20),
+                        // decoration: BoxDecoration(color: Colors.pink),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Text('Lyft rides thorugh March 9999.'),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.baseline,
+                              children: [
+                                Text(
+                                  '5',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 25),
+                                ),
+                                Text(
+                                  'X',
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 10),
+                                )
+                              ],
+                            )
+
+                            //Image.asset('')
+                          ],
+                        ),
+                      )),
+                ),
+                Expanded(
+                  child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      color: Colors.pink,
+                      child: Container(
+                        // decoration: BoxDecoration(color: Colors.pink),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            //Image.asset('')
+                            Text('Lyft rides thorugh March 2022.'),
+                            Text('5x')
+                          ],
+                        ),
+                      )),
+                )
+              ])
             ],
           ),
         ));
